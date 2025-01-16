@@ -18,16 +18,13 @@ const Users = () => {
 
         for (let i = 0; i < data.results.length; i++) {
             let asd : UserType = {
-                id : data.results[i].id.value,
+                id : data.results[i].login.uuid,
                 img : data.results[i].picture.large,
                 name : data.results[i].name.first + " " + data.results[i].name.last
             }
             temp.push(asd)
         }
-        console.log(data.results)
-        setUsers(temp)
-        console.log(users)
-        
+        setUsers(temp)     
     } 
     catch (error) 
     {
